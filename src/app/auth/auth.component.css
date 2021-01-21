@@ -32,7 +32,12 @@
 }
 
 .auth_logo{
-    margin: 5%  0% 1% 25% !important;
+    margin: 5%  0% 3% 12% !important;
+    width:  75% !important;
+    height: 7.5vh !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/auth/auth_logo.png');
 }
 
 .auth-input{
@@ -41,7 +46,7 @@
 
 .btn{
     top: 50%; 
-    left: 25%;
+    left: 32%;
     position: relative;
     width:  56% !important;
     height: auto !important;
