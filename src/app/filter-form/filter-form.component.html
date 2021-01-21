@@ -1,0 +1,40 @@
+<div class="container">
+    <form  #searchForm="ngForm">
+        <div class="row">
+
+            <div class="col-md-3 col-lg-3 col-sm-12">
+                <select class="form-control" name="agentID" [(ngModel)]="model.agentID"
+                #agentID="ngModel">
+                    <option>--SELECT AGENT--</option>
+                    <option *ngFor="let agent of agents" [value]="agent._id">
+                        {{ agent.first_name| titlecase }}
+                        {{ agent.last_name | titlecase }}
+                    </option>
+                </select>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-sm-12">
+                <input type="text" class="form-control start-date-search"
+                    placeholder="Start Date" name="startDate" [(ngModel)]="model.startDate"
+                    ngbDatepicker #startDate="ngbDatepicker" (click)="startDate.toggle()">
+            </div>
+            
+            <div class="col-md-2 col-lg-2 col-sm-12">
+                <input type="text" class="form-control end-date-search"
+                placeholder="End Date" name="endDate" [(ngModel)]="model.endDate"
+                ngbDatepicker #endDate="ngbDatepicker" (click)="endDate.toggle()">
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-sm-12">
+                <input type="button" class="btn btn-success btn-block" value="Filter"
+                [disabled]="!searchForm.form.valid" (click)='filterDashboardData();'>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-sm-12">
+                <input type="button" class="btn btn-default btn-block" value="Clear"
+                (click)='searchForm.reset();filterDashboardData();'>
+            </div>
+            
+        </div>
+    </form>
+</div>

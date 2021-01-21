@@ -1,0 +1,36 @@
+.tnps-graph-title{
+    width: 93px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #161616;
+}
+
+.tnps-monthly-label{
+    width: 107px;
+    height: 13px;
+    font-size: 10px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.3;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8d8d8d;
+}
+
+.tnps-graph-rule{
+    width: 29px;
+    height: 4px;
+    border-radius: 2px;
+    background-image: linear-gradient(265deg, #7467f0 98%, #2896e9 0%);
+}
+
+.chart-wrapper{
+    margin:2.5% 0% 0% 0%;
+}

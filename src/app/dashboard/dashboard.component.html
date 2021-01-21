@@ -1,0 +1,75 @@
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
+<div class="screen">
+  <div class="container">
+      <div class="row">
+        <div class="card sidemenu col-md-2 col-lg-2 col-sm-12">
+          <app-side-bar></app-side-bar>
+        </div>
+        <!--- START CONTENT HERE -->
+          <div class="col-md-10 col-lg-10 col-sm-12">
+            <div class="search-controls card">
+              <app-filter-form [agents]='agents' (filterDashboard)='filterDashboardStats($event)'></app-filter-form>
+            </div>
+          <div class="stat-panes">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><div class="dashboard-dot resolution-dot"></div>Total TNPS</h5>
+                    <p class="nps-score">{{ dashboardStats.totalTNPS.percentNPS }}%</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3 col-lg-3 col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><div class="dashboard-dot resolution-dot"></div>Issues Resolution</h5>
+                    <p class="yes-resolution">{{ dashboardStats.issuesResolution.positive }}% (yes)</p>
+                    <p class="no-resolution">{{  dashboardStats.issuesResolution.negative }}% (no)</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-3 col-lg-3 col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><div class="dashboard-dot detractors-dot"></div>Detractors</h5>
+                    <p class="nps-percent">{{ dashboardStats.totalTNPS.detractors }}%</p>
+                    <div class="progress">
+                      <div class="progress-bar bg-danger" role="progressbar"
+                       style="width: {{dashboardStats.totalTNPS.detractors}}%"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-3 col-lg-3 col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><div class="dashboard-dot resolution-dot"></div>Promoters</h5>
+                    <p class="nps-percent">{{ dashboardStats.totalTNPS.promoters }}%</p>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar"
+                       style="width: {{dashboardStats.totalTNPS.promoters}}%"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card tnps-trend-container">
+            <app-tnps-trends 
+              [chartData]   ='lineChartData'
+              [chartLabel]  ='lineChartLabels'
+              [chartColors] = 'lineChartColors'
+              [chartType]   = 'lineChartType'></app-tnps-trends>
+          </div>
+          <!-- END CONTENT HERE -->
+  </div>
+</div>

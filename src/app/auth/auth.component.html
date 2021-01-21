@@ -1,0 +1,76 @@
+<div class="auth-container">
+        <div class="row">
+            <div class="auth-card">
+                <div class="row auth_logo">
+                    <img src="../../assets/auth/auth_logo.png">
+                </div>
+                <div class="row auth-project">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <p class="text-center">Welcome to</p>
+                        <p class="text-center auth-project-name">Safaricom I-TNPS</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="onSubmit()" 
+                        #f="ngForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-10 col-lg-10 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="username"
+                                            [(ngModel)]="form.username"
+                                            required
+                                            minlength="3"
+                                            #username="ngModel"
+                                            class="form-control auth-input"
+                                            placeholder="Enter Username"
+                                        >
+                                    </div>
+                                    <div [hidden]="username.valid || username.pristine"
+                                    class="alert alert-danger" role="alert">
+                                    Username should be at least three(3) characters
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-lg-10 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="password" name="password" 
+                                            [(ngModel)]="form.password"
+                                            required
+                                            minlength="6"
+                                            #password="ngModel"
+                                            class="form-control auth-input"
+                                            placeholder="Enter Password"
+                                        >
+                                    </div>
+                                    <div [hidden]="password.valid || password.pristine"
+                                    class="alert alert-danger" role="alert">
+                                       Password should be at least six(6) characters
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-lg-10 col-sm-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-success btn-block"
+                                         [disabled]="!f.form.valid"> Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-lg-10 col-sm-12">
+                                    <div class="form-group">
+                                        <div class="alert alert-danger"
+                                        role="alert" *ngIf="f.submitted && isLoginFailed">
+                                         {{ errorMessage }}
+                                        </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

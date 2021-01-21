@@ -1,0 +1,23 @@
+.navbar{
+width: 100%;
+height: auto;
+box-shadow: 0 4px 16px 0 rgba(167, 175, 183, 0.33);
+background-color: #ffffff;
+}
+
+.align-top{
+  margin: -7.5% 1.5% 0% 18.5%;
+}
+
+.tnps_name{
+  width: 133px;
+  height: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #001737;
+}

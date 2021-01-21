@@ -1,0 +1,64 @@
+.auth-container{
+    background-image: url('../../assets/auth/auth_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100.05%;
+    height: 100vh;
+    padding: 15% 36% 25% 36%;  
+}
+
+.auth-card{
+    width: 100%;
+    height: auto;
+    border-radius: unset !important;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.auth-project{
+    font-size: 18px;
+    font-stretch: normal;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+  
+.auth-project-name{
+    color: #43b02a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.auth_logo{
+    margin: 5%  0% 1% 25% !important;
+}
+
+.auth-input{
+    margin: 2% 0% 2% 10%;
+}
+
+.btn{
+    top: 50%; 
+    left: 25%;
+    position: relative;
+    width:  56% !important;
+    height: auto !important;
+    margin: 2.5% 0% 2.5% 0%;
+}
+
+.ng-valid[required],.ng-valid.required{
+    border-left: 4px solid #43b02a;
+}
+
+.ng-invalid:not(form){
+    border-left: 4px solid #e3002a; 
+}
+
+.alert{
+    color: #000000;
+    margin-left: 10%;
+    font-size: 12px;
+    width: 100%;
+}

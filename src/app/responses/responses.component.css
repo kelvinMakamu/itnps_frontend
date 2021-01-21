@@ -1,0 +1,10 @@
+.custom-pagination /deep/ .ngx-pagination .current {
+    background: #43b02a !important;
+    border-radius: 50% !important;
+    margin: 10% 0% 10% 0% !important;
+}
+
+.verbatim-wrap{
+    width: 25% !important;
+    word-wrap: normal;
+}

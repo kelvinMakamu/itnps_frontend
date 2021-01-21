@@ -1,0 +1,71 @@
+<app-nav-bar></app-nav-bar>
+<div class="screen">
+  <div class="container">
+      <div class="row">
+        <div class="card sidemenu col-md-2 col-lg-2 col-sm-12">
+          <app-side-bar></app-side-bar>
+            </div>
+            <!--- START CONTENT HERE -->
+            <div class="col-md-10 col-lg-10 col-sm-12">
+                <div class="card"> 
+                    <div class="table-responsive">
+                        <h4>Responses</h4>
+                        <hr>
+                        <div class="d-flex flex-row-reverse bd-highlight mb-2">
+                            <div class="p-2 bd-highlight">
+                              <select (change)="onTableSizeChange($event)" class="custom-select">
+                                <option *ngFor="let size of tableSizes" [ngValue]="size">
+                                  {{ size }}
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-success">
+                              <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Agent</th>
+                                <th>Channel</th>
+                                <th>Resolution</th>
+                                <th>Satisfaction</th>
+                                <th>NPS</th>
+                                <th>Verbatim</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let response of responses | paginate : { itemsPerPage: tableSize,
+                                        currentPage: page, totalItems: count };
+                                let i = index" [class.active]="i == currentIndex">
+                                <td>{{ page == 1 ? (i+1) : (tableSize*(page-1)) + (i+1) }}</td>
+                                <td>{{ response.createdAt| date }}</td>
+                                <td>
+                                  {{ response.agent_id.first_name | titlecase }}
+                                  {{ response.agent_id.last_name  | titlecase }}
+                                </td>
+                                <td>{{ response.medium }}</td>
+                                <td>{{ response.satisfaction}}</td>
+                                <td>{{ response.resolution}}</td>
+                                <td>{{ response.nps_score }}</td>
+                                <td class="text-wrap verbatim-wrap">{{ response.verbatim }}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        
+                          <div class="d-flex justify-content-center">
+                            <pagination-controls 
+                              class="custom-pagination"
+                              responsive="true" 
+                              previousLabel="Prev" 
+                              nextLabel="Next" 
+                              (pageChange)="onTableDataChange($event)">
+                            </pagination-controls>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT HERE -->
+        </div>
+    </div>

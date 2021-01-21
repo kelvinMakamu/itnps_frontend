@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+        <h6 class="tnps-graph-title">TNPS Trends</h6>
+        <span class="tnps-monthly-label">Daily TNPS Trends</span>
+        <div class="tnps-graph-rule"></div>
+        <div class="chart-wrapper">
+            <canvas baseChart 
+                [datasets]  = "chartData" 
+                [labels]    = "chartLabel" 
+                [colors]    = "chartColors" 
+                [chartType] = "chartType" >
+            </canvas>
+        </div>
+    </div> 
+</div>

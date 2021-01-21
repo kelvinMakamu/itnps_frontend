@@ -1,0 +1,8 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato:400,300,700,900'); */
+
+.nav-item{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  float: left;
+}

@@ -1,0 +1,42 @@
+:host ::ng-deep .ngb-dp-month {
+    font-style: normal !important;
+    color: #000000 !important;
+    font-size: 11px !important;
+    border:1px solid #dde4eb;
+    border-top: unset !important;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px 0 rgba(196, 200, 208, 0.4);
+}
+
+:host ::ng-deep .ngb-dp-weekdays .ngb-dp-weekday{
+    font-style: normal !important;
+    color: #000000 !important;
+    font-size: 11px !important;
+}
+
+:host ::ng-deep .ngb-dp-arrow .ngb-dp-arrow-btn{
+    font-size: 11px !important;
+    color: #43b02a !important;
+}
+
+:host ::ng-deep .ngb-dp-header {
+    font-style: normal !important;
+    color: #000000 !important;
+    font-size: 11px !important;
+    background: #ffffff !important;
+    padding:2% 2% 2% 2% !important;
+    border:1px solid #dde4eb;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(196, 200, 208, 0.4);
+}
+
+:host ::ng-deep .ngb-dp-weekdays {
+    font-style: normal !important;
+    color: #000000 !important;
+    font-size: 11px !important;
+    background: #ffffff !important;
+}
+
+:host ::ng-deep .custom-select{
+    margin: 0% 0% 2.5% 2.5% !important;
+}

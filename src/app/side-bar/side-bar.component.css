@@ -1,0 +1,52 @@
+.profile-separator{
+  width:  125%;
+  margin: 5% 0% 0% -15%;
+  border-bottom:1.6px solid #ebf2f7;
+}
+
+.menu-item {
+  width: 80px;
+  height: auto !important;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #58595b;
+}
+
+.menu-item-image {
+  width: 24px;
+  height: auto;
+}
+  
+.menu-item-divider{
+  border-bottom:2.6px solid #ebf2f7;
+}
+  
+.profile-pic{
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  border: solid 0.5px #ffffff;
+}
+
+.profile-name{
+  width: 100%;
+  height: 16px;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+}
+
+.profile-level{
+  color: #e4002b;
+  font-size: 12px;
+  font-weight: lighter;
+}

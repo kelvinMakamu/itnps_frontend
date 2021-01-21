@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";  
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+h1, h2, h3, h4{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+body, html {
+    margin: 0;
+    height: auto;
+}
+
+a{
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.active-menu-item,a:active,a:focus,a:visited,a:hover,.active{
+ color: #43b02a !important;
+}
+
+.list-group{
+   border: unset !important;
+}
+
+input{
+    color:#000000 !important;
+    font-weight: lighter !important;
+}
+
+input:focus, textarea:focus, input.form-control:focus, select:focus {
+    border: 1px solid #43b02a;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.swal2-cancel, .swal2-cancel:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    text-transform: capitalize !important;
+    border: 1px solid #757575 !important;
+}
+
+.swal2-confirm, .swal2-confirm:focus  {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    text-transform: capitalize !important;
+    border: 1px solid #43b02a !important;
+}
+
+.form-control{
+    border: solid 1px #43b02a;
+}
+
+.btn{
+    font-weight: lighter !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    border-radius: unset !important;
+}
+
+.btn-success{
+    background-color: #43b02a !important;
+}
+
+.btn-default{
+    background-color: #808285 !important;
+}
+
+::-webkit-input-placeholder{ 
+    color: #43b02a !important;
+    font-weight: lighter;
+}
+
+:-ms-input-placeholder{ 
+    color: #43b02a !important;
+    font-weight: lighter;
+}
+
+::placeholder{
+    color: #43b02a !important;
+    font-weight: lighter;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+::-webkit-input-placeholder { 
+    opacity: 1; -webkit-transition: opacity .5s; transition: opacity .5s;
+ }  /* Chrome <=56, Safari < 10 */
+
+:-moz-placeholder { 
+    opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s;
+ } /* FF 4-18 */
+
+::-moz-placeholder { 
+    opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s;
+ } /* FF 19-51 */
+
+:-ms-input-placeholder { 
+    opacity: 1; -ms-transition: opacity .5s; transition: opacity .5s;
+ } /* IE 10+ */
+
+::placeholder {
+     opacity: 1; transition: opacity .5s;
+} /* Modern Browsers */
+    
+*:focus::-webkit-input-placeholder { 
+    opacity: 0;
+} /* Chrome <=56, Safari < 10 */
+
+*:focus:-moz-placeholder {
+     opacity: 0;
+} /* FF 4-18 */
+
+*:focus::-moz-placeholder {
+     opacity: 0;
+} /* FF 19-50 */
+
+*:focus:-ms-input-placeholder {
+     opacity: 0;
+} /* IE 10+ */
+
+*:focus::placeholder {
+     opacity: 0; 
+} /* Modern Browsers */
+
+.card {
+  width: 100%;
+  height: auto;
+  border-radius: unset !important;
+  box-shadow: 0 3px 6px 0 rgba(196, 200, 208, 0.4);
+  border:1px solid #dde4eb;
+  background-color: #ffffff;
+}
+
+.card-body{
+    flex: none !important;
+}
+
+.card-title{
+    width: 100%;
+    height: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.screen{
+    width: 100%;
+    margin:0 auto;
+    margin-top:3%;
+}
+
+.sidemenu{
+    height: 320px !important;
+}
+
+/* Responses Styles */
+th {
+    text-align: left;
+}
+
+table{
+    margin: 2% 0% 2% 0%;
+}
+
+.table-responsive{
+    font-size: 12px;
+    padding: 3% 3% 3% 3%;
+}
